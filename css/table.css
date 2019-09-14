@@ -1,0 +1,35 @@
+table {
+    font-family: Verdana, Geneva, sans-serif;
+    border: 0px solid #239B56;
+    background-color: #D5F5E3;
+    width: 350px;
+    height: 50px;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table td, table th {
+    border: 1px solid #FFFFFF;
+    padding: 0px 2px;
+  }
+  table tbody td {
+    font-size: 13px;
+  }
+  table tr:nth-child(even) {
+    background: #EAFAF1;
+  }
+  table th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #FFFFFF;
+    text-align: left;
+    border-left: 1px solid #FFFFFF;
+    background: #239B56;
+    border-bottom: 3px solid #FFFFFF;
+}
+  table th:first-child {
+    border-left: none;
+  }
+  
+  table tfoot td {
+    font-size: 14px;
+  }

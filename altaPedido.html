@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/out.css">
+	<link rel="stylesheet" href="css/p.css">
+	<link rel="stylesheet" href="css/button.css">
+	<link rel="stylesheet" href="css/table.css">
+	<style>
+		.button1 {
+			width: 160px;
+			height: 40px;
+		}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="altaPedido();">
+
+	<button class="button button1" onclick="window.location.href = 'index.html';"
+	style="top: 10px;left: 45px;position: absolute;"><b>VOLVER</b></button>
+
+	<button class="button button1" onclick="guardarPedido();";"
+	style="top: 10px;left: 225px;position: absolute;"><b>GUARDAR</b></button>
+		
+	<p style="top: 80px;left: 50px;position: absolute;">Ciclo</p>
+	<input type="text" id="ciclo"
+	style="width:256px;height:22px;top: 80px;left: 200px;position: absolute;">
+	</input>
+
+	<p style="top: 80px;left: 480px;position: absolute;">Cliente</p>
+	<input type="text" id="cliente"
+	style="width:256px;height:22px;top: 80px;left: 650px;position: absolute;">
+	</input>
+
+	<p style="top: 120px;left: 50px;position: absolute;">Producto</p>
+	<input type="number" id="producto"
+	style="width:256px;height:22px;top: 120px;left: 200px;position: absolute;">
+	</input>
+
+	<p style="top: 120px;left: 480px;position: absolute;">Precio</p>
+	<input type="number" id="precio"
+	style="width:256px;height:22px;top: 120px;left: 650px;position: absolute;">
+	</input>
+
+	<p style="top: 160px;left: 50px;position: absolute;">% de ganancia</p>
+	<input type="number" id="porGanancia"
+	style="width:256px;height:22px;top: 160px;left: 200px;position: absolute;">
+	</input>
+
+	<p style="top: 160px;left: 480px;position: absolute;">Cantidad</p>
+	<input type="number" id="cantidad"
+	style="width:256px;height:22px;top: 160px;left: 650px;position: absolute;">
+	</input>
+
+	<p style="top: 200px;left: 50px;position: absolute;">Puntos</p>
+	<input type="number" id="puntos"
+	style="width:256px;height:22px;top: 200px;left: 200px;position: absolute;">
+	</input>
+
+	<p style="top: 200px;left: 480px;position: absolute;">Notas</p>
+	<input type="text" id="notas"
+	style="width:256px;height:22px;top: 200px;left: 650px;position: absolute;">
+	</input>
+
+	<p style="top: 250px;left: 650px;position: absolute;">Cantidad de Pedidos</p>
+	<output type="text" id="cantPed"
+	style="width:256px;height:22px;top: 250px;left: 850px;position: absolute;">
+	</output>
+
+	<p style="top: 270px;left: 650px;position: absolute;">Total a Pagar</p>
+	<output type="text" id="totPag"
+	style="width:256px;height:22px;top: 270px;left: 850px;position: absolute;">
+	</output>
+
+	<p style="top: 290px;left: 650px;position: absolute;">Total a Cobrar</p>
+	<output type="text" id="totCob"
+	style="width:256px;height:22px;top: 290px;left: 850px;position: absolute;">
+	</output>
+
+	<p style="top: 310px;left: 650px;position: absolute;">Cuanto Gane?</p>
+	<output type="text" id="cuanGan"
+	style="width:256px;height:22px;top: 310px;left: 850px;position: absolute;">	
+	</output>
+
+	<p style="top: 330px;left: 650px;position: absolute;">Cuantos Puntos Sume?</p>
+	<output type="text" id="cuanPun"
+	style="width:256px;height:22px;top: 330px;left: 850px;position: absolute;">
+	</output>
+
+	<div id="area" style="top: 250px;left: 50px;position: absolute; overflow-x:auto;"></div>
+
+	<script>  var tabGlob = [] </script>
+	<script src="js/admTabla.js"></script>
+    <script src="js/altaPedido.js"></script>
+	
+</body>
+</html>
