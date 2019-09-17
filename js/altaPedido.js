@@ -64,7 +64,7 @@
   function obtenerPedidos() {
     // Create a request variable and assign a new XMLHttpRequest object to it.
     var request = new XMLHttpRequest();
-    var apiUrl = "http://127.0.0.1:3000/pedidos";
+    var apiUrl = urlServer + "/pedidos";
     request.open("get", apiUrl, true);
     request.setRequestHeader("Content-Type", "application/json"); 
     request.send();
@@ -123,7 +123,7 @@
   function guardarPedido() {
     // Create a request variable and assign a new XMLHttpRequest object to it.
     var request = new XMLHttpRequest();
-    var apiUrl = "http://127.0.0.1:3000/pedidos";
+    var apiUrl = urlServer + "/pedidos";
     var ciclo = document.getElementById('ciclo');
     var cliente = document.getElementById('cliente');
     var producto = document.getElementById('producto');
@@ -155,7 +155,7 @@
     
     function eliminarPedido(id) {
       var request = new XMLHttpRequest();
-      var apiUrl = "http://127.0.0.1:3000/pedidos/" + id;
+      var apiUrl = urlServer + "/pedidos/" + id;
       request.open("delete", apiUrl, true);
       request.send();
       request.onload = function () {
