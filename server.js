@@ -50,6 +50,6 @@ require('./app/routes/cicloRoute.js')(app);
 require('./app/routes/clienteRoute.js')(app);
 
 // listen for requests
-app.listen(3001, () => {
-    console.log("Server is listening on port 3001");
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
 });

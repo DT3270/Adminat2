@@ -22,6 +22,7 @@
   border: none;
   text-align: left;
   outline: none;
+  font-family: Verdana;
   font-size: 15px;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795'; /* Unicode character for "plus" sign (+) */ 
   font-size: 13px;
   color: white;
   float: right;

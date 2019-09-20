@@ -81,14 +81,15 @@
 
         var linea = [];
 
-        linea.push(document.createTextNode(json[i].ciclo));
+        linea.push(document.createTextNode('C' + json[i].ciclo));
         linea.push(document.createTextNode(json[i].cliente));
         linea.push(document.createTextNode(json[i].producto));
-        linea.push(document.createTextNode(json[i].precio));
         linea.push(document.createTextNode(json[i].cantidad));
+        linea.push(document.createTextNode('$' + json[i].precio));
+        linea.push(document.createTextNode('$' + (json[i].precio * json[i].cantidad)));
         linea.push(document.createTextNode(json[i].porGanancia));
         var ganancia = (json[i].precio * json[i].porGanancia / 100) * json[i].cantidad;
-        linea.push(document.createTextNode(ganancia));
+        linea.push(document.createTextNode('$' + ganancia));
         var puntos = json[i].puntos * json[i].cantidad;
         linea.push(document.createTextNode(puntos));
         linea.push(document.createTextNode(json[i].notas));
@@ -110,12 +111,12 @@
 
       };
       tabGlob = tabla;
-      var tit = ["Ciclo", "Cliente", "Producto", "Precio Unitario", "Cantidad", "%", "Ganancia", "Puntos", "Notas", ""];
+      var tit = ["Ciclo", "Cliente", "Producto", "Cantidad", "Precio Unitario", "Precio", "%", "Ganancia", "Puntos", "Notas", ""];
       crearTabla(tit, tabGlob);
       document.getElementById('cantPed').value = json.length;
-      document.getElementById('totPag').value = totCob - cuanGan;
-      document.getElementById('cuanGan').value = cuanGan;
-      document.getElementById('totCob').value = totCob;
+      document.getElementById('totPag').value = '$' + (totCob - cuanGan);
+      document.getElementById('cuanGan').value = '$' + cuanGan;
+      document.getElementById('totCob').value = '$' + totCob;
       document.getElementById('cuanPun').value = cuanPun;
     };
   };
